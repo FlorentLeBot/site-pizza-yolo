@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza-Yolo</title>
+
+    <!-- cdn font-awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+    <!-- google font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ma feuille de style -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="bandeau">
+
+        <!-- le menu burger  -->
+
+        <div class="menu-wrap">
+
+            <input type="checkbox" class="toggler " />
+            <div class="hamburger">
+
+                <!-- div permettant de creer les lignes du burger -->
+
+                <div></div>
+            </div>
+
+            <!-- le menu -->
+
+            <div class="menu">
+
+                <div class="menus container">
+
+
+                    <!-- menu principal -->
+
+                    <nav id="menu-principal">
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="carte-menu.html">Menu</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+
+                    <!-- menu php -->
+
+                    <nav id="menu-php">
+                        <ul>
+                            <li><a href="#connexion.php" title="Se connecter"><i class="fa fa-user-circle"
+                                        aria-hidden="true"></i>
+                                </a></li>
+                            <li><a href="#inscription.php" title="S'inscrire"><i class="fas fa-pen"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- contenu du bandeau -->
+
+        <div id="contenu-bandeau" class="container">
+            <figure class="taille-image-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="logo" class="logo">
+                </a>
+            </figure>
+            <div>
+                <h1>Bienvenue</h1>
+                <p>Ouvert 7j/7</p>
+                <p><a href="contact.html#horaires"> Horaire</a></p>
+            </div>
+        </div>
+
+        <!-- les boutons du menu -->
+
+        <section id="boutons-menu">
+            <div class=" bouton"><a href="#commande-en-ligne.php"><i class="fa fa-cart-arrow-down"
+                        aria-hidden="true"></i></a></div>
+            <div class="bouton"><a href="#tel"><i class="fas fa-phone"></i></a></div>
+            <div class="bouton"><a href="carte-menu.html"><i class="fas fa-pizza-slice"></i></a></div>
+        </section>
+    </header>
+
+    <main id="contenu-accueil" class="container">
+
+        <!-- le slider -->
+
+        <section id="slider" class="container">
+
+            <input class="radio-size" type="radio" name="slider" id="slide-1" checked>
+            <input type="radio" name="slider" id="slide-2">
+            <input type="radio" name="slider" id="slide-3">
+            <input type="radio" name="slider" id="slide-4">
+            <input type="radio" name="slider" id="slide-5">
+
+            <label for="slide-1" class="img-size" id="slide1"><img src="images/slider-1.png" alt="pizza"></label>
+            <label for="slide-2" class="img-size" id="slide2"><img src="images/slider-2.png" alt="pizza"></label>
+            <label for="slide-3" class="img-size" id="slide3"><img src="images/slider-3.png" alt="pizza"></label>
+            <label for="slide-4" class="img-size" id="slide4"><img src="images/slider-4.png" alt="pizza"></label>
+            <label for="slide-5" class="img-size" id="slide5"><img src="images/img-pizza-1-mini.jpg"
+                    alt="pizza"></label>
+
+        </section>
+
+        <!-- la présentation -->
+
+        <article id="presentation" class="forme">
+
+            <h2>30 ans d'expérience</h2>
+            <p>Installés depuis 1982, Frédéric et Julien mettent tout leur savoir-faire à votre service pour vous
+                proposer de délicieux paninis, de copieux burgers et succulentes lasagnes et, bien sûr, leurs
+                fameuses pizzas ! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus minus
+                consequuntur repellat neque tempore officia illo hic! Distinctio temporibus odit incidunt. Corrupti
+                totam dolores voluptates quasi deleniti illo debitis iusto quas ex possimus aliquam molestiae magni
+                assumenda, maiores aperiam itaque nostrum culpa blanditiis ea praesentium. Ratione amet nobis
+                perferendis reiciendis?</p>
+        </article>
+
+
+        <!-- les catégories -->
+
+        <section id="categories">
+            <article class="categorie">
+                <a href="carte-menu.html">
+                    <h2>La carte</h2>
+                    <img src="images/carte-des-pizzas.png" alt="la-carte">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum deleniti nobis repudiandae amet
+                        asperiores fuga, quas ullam voluptatum! Amet, iusto.</p>
+                </a>
+            </article>
+            <article class="categorie ">
+                <a href="blog.html">
+                    <h2>La pizza du mois</h2>
+                    <img src="images/image-blog-accueil.png" alt="pizza-du-mois">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum deleniti nobis repudiandae amet
+                        asperiores fuga, quas ullam voluptatum! Amet, iusto.</p>
+                </a>
+            </article>
+            <article class="categorie">
+                <a href="blog.html">
+                    <h2>Blog</h2>
+                    <img src="images/image-blog.png" alt="blog">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum deleniti nobis repudiandae amet
+                        asperiores fuga, quas ullam voluptatum! Amet, iusto.</p>
+                </a>
+            </article>
+
+        </section>
+
+        <section id="avis">
+
+            <h2>L'avis de nos clients</h2>
+
+            <article class="avis">
+                <h3>Liza</h3>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quo, natus facilis veritatis vitae
+                    aspernatur molestiae similique soluta reiciendis perspiciatis!</p>
+            </article>
+            <article class="avis">
+                <h3>Jean</h3>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, inventore.</p>
+            </article>
+            <article class="avis">
+                <h3>Florent</h3>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci officia quidem temporibus incidunt
+                    consequatur vitae.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer id="pied-de-page">
+
+
+        <aside id="contenu-pied" class="container">
+
+
+
+            <!-- les boutons des réseaux sociaux -->
+
+            <div id="boutons-reseaux-sociaux">
+                <div class=" bouton"><a href="#facebook"><i class="fab fa-facebook"></i></a></div>
+                <div class="bouton"><a href="#twitter"><i class="fab fa-twitter"></i></a></div>
+                <div class="bouton"><a href="#instagram"><i class="fab fa-instagram"></i></a></div>
+            </div>
+
+
+
+            <!-- la newsletter -->
+
+            <section id="newsletter">
+                <h4>Newsletter</h4>
+                <p>Inscrivez-vous à notre Newsletter et recevez nos offres du moment</p>
+                <form action="#enregistrement-newsletter.php" method="post">
+                    <input type="email" name="email" placeholder="Tapez votre Email">
+                    <input type="submit">
+                </form>
+            </section>
+
+
+
+            <!-- les liens -->
+
+            <div id="lien-pied">
+                <div id="colonne-1">
+                    <a href="#">
+                        <p>Politique de confidentialité</p>
+                    </a>
+                    <a href="#">
+                        <p>Mentions légales</p>
+                    </a>
+                </div>
+                <div id="colonne-2">
+                    <a href="index.html">
+                        <p>Accueil</p>
+                    </a>
+                    <a href="carte-menu.html">
+                        <p>La carte des pizzas</p>
+                    </a>
+                    <a href="blog.html">
+                        <p>Blog</p>
+                    </a>
+                    <a href="contact.html">
+                        <p>Contact</p>
+                    </a>
+                </div>
+
+
+
+                <!-- la fleche retour en haut -->
+
+                <div id="fleche"><a href="index.html"><i class="fas fa-arrow-circle-up "></i></a></div>
+            </div>
+
+        </aside>
+
+
+        <!-- le copyright -->
+
+        <div id="copyright">
+            <p><a href="#">copyright 2021</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

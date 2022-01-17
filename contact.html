@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza-Yolo</title>
+
+    <!-- cdn font-awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+    <!-- google font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ma feuille de style -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="bandeau">
+
+        <!-- le menu burger  -->
+
+        <div class="menu-wrap">
+
+            <input type="checkbox" class="toggler " />
+            <div class="hamburger">
+                <div></div>
+            </div>
+
+            <!-- le menu -->
+
+            <div class="menu">
+
+                <div class="menus container">
+
+
+                    <!-- menu principal -->
+
+                    <nav id="menu-principal">
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="carte-menu.html">Menu</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+
+                    <!-- menu php -->
+
+                    <nav id="menu-php">
+                        <ul>
+                            <li><a href="#connexion.php" title="Se connecter"><i class="fa fa-user-circle"
+                                        aria-hidden="true"></i>
+                                </a></li>
+                            <li><a href="#inscription.php" title="S'inscrire"><i class="fas fa-pen"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- contenu du bandeau -->
+
+        <div id="contenu-bandeau" class="container">
+            <figure class="taille-image-logo">
+                <img src="images/logo.png" alt="logo" class="logo">
+            </figure>
+            <div>
+                <h1>Bienvenue</h1>
+                <p>Ouvert 7j/7</p>
+                <p><a href="contact.html#horaires"> Horaire</a></p>
+            </div>
+        </div>
+
+        <!-- les boutons du menu -->
+
+        <section id="boutons-menu">
+            <div class=" bouton"><a href="#commande-en-ligne.php"><i class="fa fa-cart-arrow-down"
+                        aria-hidden="true"></i></a></div>
+            <div class="bouton"><a href="#tel"><i class="fas fa-phone"></i></a></div>
+            <div class="bouton"><a href="carte-menu.html"><i class="fas fa-pizza-slice"></i></a></div>
+        </section>
+    </header>
+
+    <main id="contenu-contact" class="container">
+
+        <!-- la carte de géolocalitation -->
+
+        <iframe class="carte-geolocalitation"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42768.76249899805!2d-4.364231172850573!3d47.93546187705521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4817261462354ed5%3A0x40ca5cd36e56440!2s29720%20Plovan!5e0!3m2!1sfr!2sfr!4v1637667340741!5m2!1sfr!2sfr"
+            width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <!-- la section nous contacter -->
+
+        <section class="nous-contacter">
+
+
+            <section id="adresses">
+                <h2>Nous contacter</h2>
+        
+                <div class="adresse">
+                    <h3>Pizza Yolo Lorient</h3>
+                    <address>2 Rue de Chez Moi</address>
+                    <p><a href="tel:+33234567891"><i class="fas fa-phone"></i>02 34 56 78 91</a></p>
+                </div>
+                <div class="adresse">
+                    <h3>Pizza Yolo Vannes</h3>
+                    <address>5 Rue de Chez Moi</address>
+                    <p><a href="tel:+33123456789"><i class="fas fa-phone"></i>01 23 45 67 89</a></p>
+                </div>
+            </section>
+
+            <section id="horaires">
+                <h2>Nos horaires d'ouverture</h2>
+    
+                <table>
+                    <tr>
+                        <td>Lundi</td>
+                        <td>11h30-13h30</td>
+                        <td>18h00-22h00</td>
+                    </tr>
+                    <tr>
+                        <td>Mardi</td>
+                        <td>11h30-13h30</td>
+                        <td>18h00-22h00</td>
+                    </tr>
+                    <tr>
+                        <td>Mercredi </td>
+                        <td>11h30-13h30</td>
+                        <td>18h00-22h00</td>
+                    </tr>
+                    <tr>
+                        <td>Jeudi</td>
+                        <td>11h30-13h30</td>
+                        <td>18h00-22h00</td>
+                    </tr>
+                    <tr>
+                        <td>Vendredi</td>
+                        <td>11h30-13h30</td>
+                        <td>18h00-22h00</td>
+                    </tr>
+                    <tr>
+                        <td>Samedi</td>
+                        <td>11h30-13h30</td>
+                        <td>18h00-22h00</td>
+                    </tr>
+                    <tr>
+                        <td>Dimanche</td>
+                        <td> </td>
+                        <td>18h00-22h00</td>
+                    </tr>
+                </table>
+
+            </section>
+
+        </section>
+
+        <!-- le formulaire de contact -->
+
+        <section id="formulaire-de-contact">
+
+            <form method="post" action="traitement.php">
+                <fieldset class="section">
+                    <legend>Laissez-nous un message</legend>
+
+                    <p class="civilite"><label for="civilite" class="petit">M.</label>
+                        <input type="radio" name="civilite" id="civilite" value="M">
+
+                        <label for="civilite">Mme</label>
+                        <input type="radio" name="civilite" id="civilite" value="Mme" checked></p>
+
+                    <p><label for="prenom">Entrez votre prénom </label>
+                        <input type="text" id="prenom" name="prenom" placeholder="prénom"></p>
+                    
+
+                    <p><label for="nom">Entrez votre nom </label>
+                        <input type="text" id="nom" name="nom" placeholder="nom"></p>
+                    
+
+                    <p><label for="email">Entrez votre email </label>
+                        <input type="email" id="email" name="email" placeholder="email"></p>
+                    
+
+                    <p><label for="message">Entrez votre message </label>
+                        <textarea name="message" rows="5" id="message" placeholder="votre message">
+                    </textarea></p>
+
+                    <p><input type="submit" value="Envoyer"></p>
+                    
+
+                </fieldset>
+            </form>
+        </section>
+        
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <footer id="pied-de-page">
+
+
+        <aside id="contenu-pied" class="container">
+
+
+
+            <!-- les boutons des réseaux sociaux -->
+
+            <section id="boutons-reseaux-sociaux">
+                <div class=" bouton"><a href="#facebook"><i class="fab fa-facebook"></i></a></div>
+                <div class="bouton"><a href="#twitter"><i class="fab fa-twitter"></i></a></div>
+                <div class="bouton"><a href="#instagram"><i class="fab fa-instagram"></i></a></div>
+            </section>
+
+
+
+            <!-- la newsletter -->
+
+            <section id="newsletter">
+                <h4>Newsletter</h4>
+                <p>Inscrivez-vous à notre Newsletter et recevez nos offres du moment</p>
+                <form action="#enregistrement-newsletter.php" type="post">
+                    <input type="email" name="email" placeholder="Tapez votre Email">
+                    <input type="submit">
+                </form>
+            </section>
+
+
+
+            <!-- les liens -->
+
+            <div id="lien-pied">
+                <div id="colonne-1">
+                    <a href="#">
+                        <p>Politique de confidentialité</p>
+                    </a>
+                    <a href="#">
+                        <p>Mentions légales</p>
+                    </a>
+                </div>
+                <div id="colonne-2">
+                    <a href="index.html">
+                        <p>Accueil</p>
+                    </a>
+                    <a href="carte-menu.html">
+                        <p>La carte des pizzas</p>
+                    </a>
+                    <a href="blog.html">
+                        <p>Blog</p>
+                    </a>
+                    <a href="contact.html">
+                        <p>Contact</p>
+                    </a>
+                </div>
+
+
+
+                <!-- la flèche retour en haut -->
+
+                <div id="fleche"><a href="index.html"><i class="fas fa-arrow-circle-up "></i></a></div>
+            </div>
+
+        </aside>
+
+
+        <!-- le copyright -->
+
+        <div id="copyright">
+            <p><a href="#">copyright 2021</a></p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

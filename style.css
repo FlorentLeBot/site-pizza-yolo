@@ -1,0 +1,1575 @@
+/* SOMMAIRE
+
+/* reset css */
+
+/* variables css */
+
+/* style commun à toutes les pages */
+
+/* HEADER : */
+
+/* bandeau */
+/* menu burger */
+/* menu principal */
+/* contenu du bandeau */
+/* boutons du bandeau */
+
+/* FOOTER : */
+
+/* les boutons des réseaux sociaux */
+/* la newsletter */
+/* les liens */
+/* la flèche retour en haut */
+/* le copyright */
+
+/* MAIN accueil */
+
+/* le slider */
+/* la présentation */
+/* le contenu de l'accueil */
+/* les avis */
+
+/* MAIN carte des pizzas */
+
+/* boutons de la carte */
+/* les articles */
+
+/* MAIN contact */
+
+/* carte de géolocalisation */
+/* section nous contacter */
+/* formulaire de contact */
+
+/* MAIN article-1, article-2 ...*/
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* reset css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--couleur-secondaire);
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--blanc);
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Rajdhani", sans-serif;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* variables css */
+
+:root {
+    --couleur-principale: #157573;
+    --couleur-secondaire: #213745;
+    --jaune: #F5C36E;
+    --noir: black;
+    --blanc: antiquewhite;
+    --overlay-color: rgba(24, 39, 51, 0.9);
+    --menu-speed: 0.75s;
+    /* --box-shadow-1: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    --box-shadow-2: box-shadow: rgba(0, 0, 0, 0.48) 6px 2px 16px 0px,
+        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* style commun à toutes les pages */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2,
+h3,
+h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* HEADER */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.menu-wrap {
+    position: fixed;
+    margin: 5px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3000;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    background: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hamburger line */
+
+.menu-wrap .hamburger>div {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+}
+
+/* top and bottom line */
+
+.menu-wrap .hamburger>div::before,
+.menu-wrap .hamburger>div::after {
+    content: "";
+    position: absolute;
+    z-index: 20;
+    top: -10px;
+    width: 30px;
+    height: 2px;
+    background: inherit;
+}
+
+/* moves line down */
+
+.menu-wrap .hamburger>div:after {
+    top: 10px;
+}
+
+/* toggler animate */
+
+.menu-wrap .toggler:checked+.hamburger>div {
+    transform: rotate(135deg);
+}
+
+/* turn lines into X */
+
+.menu-wrap .toggler:checked+.hamburger>div::before,
+.menu-wrap .toggler:checked+.hamburger>div::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* rotate on hover when checked */
+
+.menu-wrap .toggler:checked+.hamburger>div {
+    transform: rotate(225deg);
+}
+
+/* show menu */
+
+.menu-wrap .toggler:checked~.menu {
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked~.menu>div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked~.menu>div>div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .menu .menus {
+    background: var(--blanc);
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* le menu principal */
+
+.menu-wrap .menu .menus #menu-principal {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu .menus #menu-principal ul li {
+    padding: 10px;
+}
+
+.menu-wrap .menu .menus #menu-principal ul li a,
+.menu-wrap .menu .menus #menu-php ul li a i {
+    color: var(--noir);
+    font-size: 2rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* 4 - le menu php */
+
+
+.menu-wrap .menu .menus #menu-php ul {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-wrap .menu .menus #menu-php ul li {
+    padding: 10px;
+}
+
+.menu-wrap .menu .menus #menu-principal ul li a:hover,
+.menu-wrap .menu .menus #menu-php ul li a i:hover {
+    color: var(--overlay-color);
+    background-color: white !important;
+    opacity: 0.9;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* bandeau */
+
+#bandeau {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url(images/image-bandeau-mini.png) no-repeat center center/cover;
+}
+
+#contenu-bandeau {
+    width: 100%;
+    height: 100%;
+}
+
+#contenu-bandeau img {
+    width: 250px;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#contenu-bandeau div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#contenu-bandeau h1 {
+    color: var(--blanc);
+    font-size: 2.5rem;
+    background-color: var(--couleur-principale);
+    padding: 0 8px
+}
+
+#contenu-bandeau p:nth-child(2) {
+    padding: 15px;
+    font-size: 1.4rem;
+    color: var(--blanc);
+}
+
+#contenu-bandeau p:nth-child(3) {
+    font-size: 1.4rem;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    background: var(--jaune);
+    color: black !important;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#contenu-bandeau p:nth-child(3):hover {
+    color: var(--blanc);
+    background: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* boutons du bandeau */
+
+#boutons-menu {
+    position: absolute;
+    top: 475px;
+    left: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.bouton {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--jaune);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.bouton a i {
+    color: var(--noir);
+    font-size: 1.8rem;
+    padding-top: 11px;
+
+}
+
+.bouton:hover,
+.bouton a i:hover {
+
+    color: var(--blanc);
+    background: none;
+
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* FOOTER */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+#pied-de-page {
+    width: 100%;
+    position: relative;
+    background: var(--couleur-principale);
+}
+
+#contenu-pied {
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+#boutons-reseaux-sociaux {
+    position: absolute;
+    margin-top: -36px;
+    left: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* newsletter */
+
+#pied-de-page #contenu-pied #newsletter {
+    color: var(--blanc);
+    width: 100%;
+    text-align: center;
+    margin: 40px auto;
+}
+
+#pied-de-page #contenu-pied #newsletter h4 {
+
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#pied-de-page #contenu-pied #newsletter p {
+    font-size: 1.4rem;
+    padding: 20px;
+    text-align: center;
+}
+
+#pied-de-page #contenu-pied #newsletter input[type="email"] {
+    height: 40px;
+    border: none !important;
+    text-align: center;
+}
+
+#pied-de-page #contenu-pied #newsletter input[type="submit"] {
+    border: none;
+    background: #213745;
+    padding: 12px;
+    color: var(--blanc);
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+#pied-de-page #contenu-pied #lien-pied {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--blanc);
+}
+
+#pied-de-page #contenu-pied #lien-pied #colonne-1,
+#pied-de-page #contenu-pied #lien-pied #colonne-2 {
+    width: 50%;
+    min-width: 300px;
+    padding: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+#pied-de-page #contenu-pied #fleche {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+#pied-de-page #copyright {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    background: var(--couleur-secondaire);
+}
+
+#pied-de-page #copyright p {
+    color: var(--blanc);
+    text-align: center;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* MAIN accueil */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* le slider */
+
+#slider {
+    display: none;
+    position: relative;
+    width: 50%;
+    height: 250px;
+    margin: 80px;
+    font-family: Helvetica;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin: 150px auto;
+
+    background-color: transparent;
+
+}
+
+label {
+    background-color: #000;
+}
+
+#slider input[type="radio"] {
+    position: relative;
+    top: 120%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 10% 15px 0 0;
+    transform: translateX(-83px);
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+#slider input:checked {
+    opacity: 1;
+    border: 2px solid #999;
+}
+
+#slider label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 100ms ease-in-out;
+}
+
+.img-size {
+    width: 50%;
+}
+
+img {
+    width: 100%;
+}
+
+/* slider fonctionnality */
+
+#slide-1:checked~#slide1,
+#slide-2:checked~#slide2,
+#slide-3:checked~#slide3,
+#slide-4:checked~#slide4,
+#slide-5:checked~#slide5 {
+    box-shadow: 0 13px 26px rgba(255, 255, 255, 0.3),
+        0 12px 6px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+}
+
+#slide-1:checked~#slide2,
+#slide-2:checked~#slide3,
+#slide-3:checked~#slide4,
+#slide-4:checked~#slide5,
+#slide-5:checked~#slide1 {
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.3),
+        0 2px 2px rgba(0, 0, 0, 0.2);
+    transform: translate3d(15%, 0, -100px);
+    opacity: 0.5;
+}
+
+#slide-1:checked~#slide3,
+#slide-2:checked~#slide4,
+#slide-3:checked~#slide5,
+#slide-4:checked~#slide1,
+#slide-5:checked~#slide2 {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    transform: translate3d(30%, 0, -250px);
+    opacity: 0.5;
+}
+
+#slide-1:checked~#slide4,
+#slide-2:checked~#slide5,
+#slide-3:checked~#slide1,
+#slide-4:checked~#slide2,
+#slide-5:checked~#slide3 {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    transform: translate3d(-30%, 0, -250px);
+    opacity: 0.5;
+}
+
+#slide-1:checked~#slide5,
+#slide-2:checked~#slide1,
+#slide-3:checked~#slide2,
+#slide-4:checked~#slide3,
+#slide-5:checked~#slide4 {
+    box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 12px 6px rgba(0, 0, 0, 0.2);
+    transform: translate3d(-15%, 0, -100px);
+    opacity: 0.5;
+}
+
+#contenu-accueil {
+    width: 100%;
+    background: var(--couleur-secondaire);
+    padding: 30px 0px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* la présentation */
+
+#contenu-accueil #presentation {
+    width: 80%;
+    margin: 10%;
+}
+
+
+#contenu-accueil .forme {
+    border-radius: 33% 67% 56% 44% / 20% 63% 37% 80%;
+    background: var(--couleur-principale);
+    transform: translate(-200px);
+}
+
+#contenu-accueil #presentation p,
+#contenu-accueil #presentation h2 {
+    color: var(--blanc);
+    padding: 20px;
+    transform: translate(200px);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* le contenu de l'accueil */
+
+#contenu-accueil #categories {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+#contenu-accueil #categories .categorie {
+    width: 100%;
+    text-align: center;
+
+}
+
+#contenu-accueil #categories .categorie h2 {
+    font-size: 1.8rem;
+    background: var(--couleur-principale);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    width: 220px;
+    height: 50px;
+    padding-top: 8px;
+}
+
+
+
+#contenu-accueil #categories .categorie h2,
+#contenu-accueil #categories .categorie p {
+    margin: 40px auto;
+}
+
+#contenu-accueil #categories .categorie p {
+    text-align: justify;
+    padding: 0 10%;
+}
+
+.taille-image {
+    width: 100%;
+}
+
+#contenu-accueil #categories .categorie img {
+    width: 300px;
+    height: 200px;
+    
+}
+
+#contenu-accueil #categories .categorie img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    transition: 0.4s ease-in-out;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.48) 6px 2px 16px 0px,
+        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+/* les avis */
+
+#avis {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+
+}
+
+#avis .avis {
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--couleur-principale);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#avis h2 {
+    width: 100%;
+    color: var(--blanc);
+    padding: 50px;
+
+}
+
+#avis .avis h3 {
+    color: var(--blanc);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+
+}
+
+#avis .avis p {
+    color: var(--blanc);
+}
+
+#avis .avis i {
+    float: left;
+    padding: 5px 5px 0 0;
+    color: var(--jaune);
+
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* MAIN carte des pizzas */
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+#contenu-carte-menu {
+    padding: 100px 0;
+
+
+}
+
+#contenu-carte-menu h2,
+#contenu-carte-menu h3 {
+
+    color: var(--blanc);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+/* menu de navigation carte menu*/
+
+
+#contenu-carte-menu nav ul {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px auto;
+}
+
+#contenu-carte-menu nav ul li {
+    padding: 20px 0;
+}
+
+#contenu-carte-menu nav ul li a {
+    padding: 10px;
+    margin: 8px;
+    height: 10px;
+    text-transform: uppercase;
+    background-color: var(--couleur-principale);
+    width: 30px;
+    color: var(--blanc);
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+#contenu-carte-menu nav ul li:hover{
+    transform: scale(1.2);
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+/* les articles */
+
+#contenu-carte-menu #pizza,
+#contenu-carte-menu #hamburger,
+#contenu-carte-menu #paninis,
+#contenu-carte-menu #boissons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+
+#contenu-carte-menu #pizza h3,
+#contenu-carte-menu #hamburger h3,
+#contenu-carte-menu #paninis h3,
+#contenu-carte-menu #boissons h3 {
+    width: 100%;
+    margin: 40px 0;
+
+}
+
+#contenu-carte-menu .pizza,
+#contenu-carte-menu .burger,
+#contenu-carte-menu .paninis,
+#contenu-carte-menu .boissons {
+    background: var(--couleur-principale);
+    margin: 20px;
+    clear: left;
+    max-width: 350px;
+    box-shadow: 0 2px 2px rgba(254, 254, 254, 0.2);
+}
+
+#contenu-carte-menu .burger,
+#contenu-carte-menu .paninis {
+    height: 260px;
+}
+
+#contenu-carte-menu .pizza {
+    height: 320px;
+}
+
+
+#contenu-carte-menu .pizza img,
+#contenu-carte-menu .burger img,
+#contenu-carte-menu .paninis img {
+    width: 30%;
+    min-width: 100px;
+    border-radius: 50%;
+    float: left;
+    margin: 18px 0 0 10px;
+
+
+}
+
+#contenu-carte-menu .pizza h4,
+#contenu-carte-menu .burger h4,
+#contenu-carte-menu .paninis h4,
+#contenu-carte-menu .boissons h4 {
+    font-size: 1.3rem;
+    color: var(--blanc);
+    padding: 20px 0;
+}
+
+#contenu-carte-menu .pizza p,
+#contenu-carte-menu .burger p,
+#contenu-carte-menu .paninis p,
+#contenu-carte-menu .boissons p {
+    font-size: 1.2rem;
+    color: var(--blanc);
+    margin-top: 20px;
+
+}
+
+#contenu-carte-menu .pizza p:nth-child(4),
+#contenu-carte-menu .burger p:nth-child(4),
+#contenu-carte-menu .paninis p:nth-child(4) {
+    padding: 50px 10px 0 10px;
+
+}
+
+#contenu-carte-menu .pizza p:nth-child(5),
+#contenu-carte-menu .pizza p:nth-child(6) {
+    word-spacing: 20px;
+    text-align: center;
+
+}
+
+#contenu-carte-menu .burger p:nth-child(5),
+#contenu-carte-menu .paninis p:nth-child(5) {
+    text-align: right;
+    padding: 5px;
+}
+
+#contenu-carte-menu .boissons {
+    width: 350px;
+}
+
+#contenu-carte-menu .soda p,
+#contenu-carte-menu .biere p {
+    margin: 30px;
+    word-spacing: 200px;
+
+}
+
+#contenu-carte-menu .vin p {
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#contenu-carte-menu .vin p span {
+    font-weight: bold;
+
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* MAIN blog */
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+#contenu-blog {
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+
+#contenu-blog h2 {
+    color: var(--blanc);
+    width: 100%;
+}
+.container-card{
+    display: none;
+}
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* les articles du blog */
+
+#contenu-blog .article-blog {
+    min-width: 300px;
+    background-color: var(--couleur-principale);
+    width: 300px;
+    color: var(--blanc);
+    margin: 50px 20px;
+}
+
+#contenu-blog .article-blog h3 {
+    padding: 20px;
+}
+
+#contenu-blog .article-blog p:nth-child(3) {
+    padding: 10px;
+}
+
+#contenu-blog .article-blog p:nth-child(4) {
+    text-align: center;
+    background-color: var(--couleur-secondaire);
+    width: 150px;
+    margin: 10px auto;
+}
+
+#contenu-blog .article-blog p:nth-child(4):hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 2px black;
+}
+
+#contenu-blog .article-blog .taille-image-blog {
+    max-width: 100%;
+    width: 100%;
+
+}
+
+#contenu-blog .article-blog img {
+    width: 100%;
+
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* MAIN contact */
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* carte de géolocalisation */
+
+#contenu-contact iframe {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 140px 20px 0px 20px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+/* la section nous contacter */
+
+.nous-contacter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nous-contacter #adresses {
+    width: 80%;
+    height: 250px;
+    background: var(--couleur-principale);
+    margin: -30px auto 0px;
+    position: relative;
+}
+
+.nous-contacter #horaires {
+
+    background: var(--couleur-principale);
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+    position: relative;
+
+}
+
+.nous-contacter #adresses h2,
+.nous-contacter #horaires h2 {
+    width: 100%;
+    color: var(--blanc);
+    margin-top: 20px;
+
+}
+
+.nous-contacter #adresses {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.nous-contacter #adresses .adresse {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 100px;
+
+
+}
+
+.nous-contacter #adresses .adresse h3 {
+    color: var(--blanc);
+    margin: 30px 0;
+
+}
+
+.nous-contacter #adresses .adresse address {
+    color: var(--blanc);
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+.nous-contacter #adresses .adresse p {
+    text-align: center;
+}
+
+.nous-contacter #adresses .adresse p a {
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.nous-contacter #adresses .adresse p a i {
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.nous-contacter #horaires {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+
+}
+
+.nous-contacter #horaires table {
+    background: var(--couleur-secondaire);
+    color: var(--blanc)
+}
+
+.nous-contacter #horaires td {
+    border: 1px outset var(--couleur-principale);
+    padding: 8px;
+}
+
+.nous-contacter #horaires tr {
+    margin: 0px
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+/* le formulaire de contact */
+
+#contenu-contact #formulaire-de-contact {
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+#contenu-contact #formulaire-de-contact .section {
+    background: var(--couleur-principale);
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#contenu-contact #formulaire-de-contact .section:hover {
+    box-shadow: 0px 0px 5px var(--blanc);
+}
+
+#contenu-contact #formulaire-de-contact legend {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: var(--blanc);
+}
+
+#contenu-contact #formulaire-de-contact .section p {
+    padding: 10px 0;
+    color: var(--blanc);
+    max-width: 180px;
+    margin: 0 auto;
+    text-align: left;
+    
+}
+#contenu-contact #formulaire-de-contact .section p label {
+    margin-top: 10px;
+    
+}
+
+#contenu-contact #formulaire-de-contact .section p input[type="text"],
+#formulaire-de-contact .section p input[type="email"] {
+    margin-top: 10px;
+    width: 180px;
+    height: 30px;
+}
+
+#contenu-contact #formulaire-de-contact .section p textarea {
+    width: 180px;
+    margin-top: 10px;
+    
+}
+
+#contenu-contact #formulaire-de-contact .section p input[type="radio"] {
+    margin: 18px;
+}
+
+#contenu-contact #formulaire-de-contact .section p input[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+}
+
+
+#contenu-contact #formulaire-de-contact .section label {
+    background: var(--couleur-principale);
+}
+
+#formulaire-de-contact .section ::placeholder {
+    text-align: center;
+}
+
+
+#contenu-contact #formulaire-de-contact .section p input[type="submit"] {
+
+    padding: 10px;
+    font-size: 0.8rem;
+    color: white;
+    background-color: var(--couleur-secondaire);
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+#contenu-contact #formulaire-de-contact .section input[type="submit"]:hover {
+    box-shadow: 0px 0px 5px #444;
+    transform: scale(1.1);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+/* MAIN article-1, article-2 ...*/
+
+#article-1,
+#article-2,
+#article-3,
+#article-4,
+#article-5,
+#article-6 {
+    padding: 100px 0;
+    color: var(--blanc);
+}
+
+#article-1 img,
+#article-2 img,
+#article-3 img,
+#article-4 img,
+#article-5 img,
+#article-6 img {
+    margin: 30px auto;
+    padding: 20px
+}
+
+#article-1 h2,
+#article-2 h2,
+#article-3 h2,
+#article-3 h2,
+#article-4 h2,
+#article-5 h2,
+#article-6 h2 {
+    color: var(--blanc);
+    padding-bottom: 20px;
+}
+
+#article-1 p,
+#article-2 p,
+#article-3 p,
+#article-3 p,
+#article-3 p,
+#article-4 p,
+#article-5 p,
+#article-6 p {
+    padding: 20px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* HEADER  */
+    /* ---------------------------------------------------------------------------------------------------------------- */
+
+    #bandeau {
+        margin-top: 60px;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* menu burger */
+
+    #bandeau .menu-wrap .hamburger,
+    #bandeau .menu-wrap .toggler {
+        display: none;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* menu principal */
+
+    .menu {
+        visibility: visible !important;
+        display: block;
+        height: 60px !important;
+        width: 100%;
+        background-color: var(--couleur-principale) !important;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    }
+
+    .menus {
+        transform: scale(1) !important;
+        display: flex;
+        justify-content: space-between !important;
+        align-items: center;
+        background-color: var(--couleur-principale) !important;
+        margin: 0 auto;
+    }
+
+    #menu-principal ul {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    #menu-principal ul li a,
+    #menu-php ul li a i {
+        font-size: 1.3rem !important;
+        color: var(--blanc) !important;
+        text-transform: uppercase;
+        padding: 30px 10px;
+    }
+
+    #menu-principal a:hover,
+    #menu-php a i:hover {
+        color: var(--couleur-principale) !important;
+    }
+
+
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* MAIN accueil*/
+    /* ---------------------------------------------------------------------------------------------------------------- */
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* le slider */
+
+    #slider {
+        display: block;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* la présentation */
+
+    .forme {
+        transform: translate(200px);
+        padding-top: 50px;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* le contenu de l'accueil */
+
+    #contenu-accueil #categories .categorie {
+        width: 45%;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* avis */
+
+    #avis .avis {
+        width: 45%;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* MAIN contact */
+
+    #contenu-contact #formulaire-de-contact .section p {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* MAIN blog */
+
+
+    /* la carte de présentation */
+
+    #contenu-blog .container-card {
+        position: relative;
+        width: 1100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 30px;
+        display: none;
+    }
+
+    .container-card {
+        position: relative;
+        max-width: 300px;
+        height: 215px;
+        background-color: var(--couleur-principale);
+        margin: 30px 10px 280px 10px;
+        padding: 20px 15px 10px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out;
+
+    }
+
+    .container-card .card:hover {
+        height: 320px;
+    }
+
+    .container-card .card .image {
+        position: relative;
+        width: 260px;
+        height: 260px;
+        top: 0;
+        right: 10px;
+        z-index: 1;
+
+    }
+
+    .container-card .card .image img {
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .container-card .card .content {
+        position: relative;
+        top: -100px;
+        padding: 10px 15px;
+        color: #111;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    .container-card .card:hover .content {
+        margin-top: 80px;
+        margin-right: 20px;
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0.2s;
+        color: var(--blanc);
+
+    }
+
+    .container-card .card:hover .content h3 {
+        margin: 10px 0;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+
+    #contenu-blog .container-card {
+        display: flex;
+    }
+
+    #contenu-blog .container-card .content {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* MAIN article-1, article-2 ... */
+
+    #article-1 img,
+    #article-2 img,
+    #article-3 img,
+    #article-4 img,
+    #article-5 img,
+    #article-6 img {
+        float: left;
+        max-width: 400px;
+        margin: 0 30px;
+        padding: 0;
+    }
+     /* ---------------------------------------------------------------------------------------------------------------- */
+    /* formulaire de contact */
+
+    .nous-contacter #adresses .adresse p a {
+        padding: 0 10px;
+        font-size: 1.2rem;
+    }
+    .civilite{
+        width: 25%;
+    }
+    
+}
+
+@media screen and (min-width: 993px) {
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* HEADER */
+    /* ---------------------------------------------------------------------------------------------------------------- */
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* le bandeau */
+
+    #bandeau {
+        margin-top: 60px;
+        background: url(images/image-bandeau.jpg) no-repeat center center/cover;
+    }
+
+    #contenu-bandeau {
+        display: flex;
+        width: 100%;
+    }
+
+    #contenu-bandeau figure {
+        margin-top: 70px;
+        width: 33%;
+    }
+
+    #contenu-bandeau figure .logo {
+        width: 100%;
+    }
+
+    #contenu-bandeau div {
+        width: 33%;
+        height: 100%
+    }
+
+    #contenu-bandeau div h1 {
+        margin-top: -40px;
+
+    }
+
+    #contenu-bandeau div p {
+        margin: 50px 0px;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* MAIN accueil */
+    /* ---------------------------------------------------------------------------------------------------------------- */
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* le slider */
+
+    #slider {
+        display: block;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* la présentation */
+
+    #contenu-accueil .forme {
+        border-radius: 25% 75% 70% 30% / 49% 30% 70% 51%;
+        transform: translate(-100px);
+        height: 300px;
+
+    }
+
+    #contenu-accueil #presentation p,
+    #contenu-accueil #presentation h2 {
+
+        transform: translate(100px);
+        overflow: hidden;
+    }
+
+    #presentation {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    #contenu-accueil #categories .categorie {
+        width: 30%;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* avis */
+
+    #avis .avis {
+        width: 30%;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------- */
+    /* FOOTER */
+    /* ---------------------------------------------------------------------------------------------------------------- */
+
+    #pied-de-page #contenu-pied {
+        display: flex;
+    }
+
+    #pied-de-page #contenu-pied #fleche {
+        text-align: right;
+    }
+
+    #pied-de-page #contenu-pied #lien-pied {
+        padding: 40px 0px;
+
+    }
+
+    #pied-de-page #contenu-pied #newsletter {
+        padding: 25px 10px;
+    }
+
+    #pied-de-page #contenu-pied #newsletter p {
+        text-align: justify;
+    }
+
+}
