@@ -7,9 +7,9 @@ require_once "navigation.php";
     <h2>Notre carte</h2>
 
     <nav>
-        <ul>
+        <ul id="nav-carte">
             <li id="btnPizzas" class="btnHover"><a href="#pizzas">Pizzas</a></li>
-            <li id="btnBurgers" class="btnHover"><a href="#burgers">Burgers</a></li>
+            <li id="btnBurgers" class="btnHover active"><a href="#burgers">Burgers</a></li>
             <li id="btnPaninis" class="btnHover"><a href="#les-paninis">Paninis</a></li>
             <li id="btnBoissons" class="btnHover"><a href="#boissons">Boissons</a></li>
         </ul>

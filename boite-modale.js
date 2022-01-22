@@ -2,6 +2,7 @@ let modal = null;
 const focusableSelector = "button, input, a";
 let focusables = [];
 let previouslyFocusedElement = null;
+
 // creation d'une fonction pour ouvrir ma boite modale
 
 const openModal = function (e) {
