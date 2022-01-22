@@ -8,6 +8,7 @@
 
 /* HEADER : */
 
+/* boite modale horaire */
 /* bandeau */
 /* menu burger */
 /* menu principal */
@@ -115,12 +116,70 @@ p {
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
+/* boite modale horaires */
+
+/* #horaires div {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+   
+    
+} */
+
+.modal{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: 9999;
+}
+
+.modal-wrapper{
+    width: 600px;
+    max-width: calc(100vh - 20px);
+    max-height: calc(100vh - 20px);
+    overflow: auto;
+    padding: 20px;
+    background: var(--couleur-principale);
+   
+}
+#horaires button{
+    width: 20px;
+    height: 20px;
+}
+#horaires h2{
+    margin: 25px 0;
+    color: var(--blanc);
+}
+#horaires table {
+    background: var(--couleur-secondaire);
+    color: var(--blanc)
+}
+
+#horaires td {
+    border: 1px outset var(--couleur-principale);
+    padding: 8px;
+}
+
+#horaires tr {
+    margin: 0px
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+
 .menu-wrap {
     position: fixed;
     margin: 5px;
     top: 0;
     right: 0;
     z-index: 1000;
+    
 }
 
 .menu-wrap .toggler {
@@ -1030,22 +1089,12 @@ img {
     position: relative;
 }
 
-.nous-contacter #horaires {
 
-    background: var(--couleur-principale);
-    width: 80%;
-    height: 400px;
-    margin: 20px auto;
-    position: relative;
-
-}
-
-.nous-contacter #adresses h2,
-.nous-contacter #horaires h2 {
+.nous-contacter #adresses h2{
     width: 100%;
     color: var(--blanc);
     margin-top: 20px;
-
+    
 }
 
 .nous-contacter #adresses {
@@ -1053,21 +1102,21 @@ img {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
+    
 }
 
 .nous-contacter #adresses .adresse {
     width: 50%;
     text-align: center;
     padding-bottom: 100px;
-
-
+    
+    
 }
 
 .nous-contacter #adresses .adresse h3 {
     color: var(--blanc);
     margin: 30px 0;
-
+    
 }
 
 .nous-contacter #adresses .adresse address {
@@ -1090,28 +1139,7 @@ img {
     font-size: 1rem;
 }
 
-.nous-contacter #horaires {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 5px 0;
-
-}
-
-.nous-contacter #horaires table {
-    background: var(--couleur-secondaire);
-    color: var(--blanc)
-}
-
-.nous-contacter #horaires td {
-    border: 1px outset var(--couleur-principale);
-    padding: 8px;
-}
-
-.nous-contacter #horaires tr {
-    margin: 0px
-}
+ 
 
 
 /* ---------------------------------------------------------------------------------------------------------------- */

@@ -31,51 +31,9 @@ require_once "navigation.php";
             </div>
         </section>
 
-        <section id="horaires">
-            <h2>Nos horaires d'ouverture</h2>
 
-            <table>
-                <tr>
-                    <td>Lundi</td>
-                    <td>11h30-13h30</td>
-                    <td>18h00-22h00</td>
-                </tr>
-                <tr>
-                    <td>Mardi</td>
-                    <td>11h30-13h30</td>
-                    <td>18h00-22h00</td>
-                </tr>
-                <tr>
-                    <td>Mercredi </td>
-                    <td>11h30-13h30</td>
-                    <td>18h00-22h00</td>
-                </tr>
-                <tr>
-                    <td>Jeudi</td>
-                    <td>11h30-13h30</td>
-                    <td>18h00-22h00</td>
-                </tr>
-                <tr>
-                    <td>Vendredi</td>
-                    <td>11h30-13h30</td>
-                    <td>18h00-22h00</td>
-                </tr>
-                <tr>
-                    <td>Samedi</td>
-                    <td>11h30-13h30</td>
-                    <td>18h00-22h00</td>
-                </tr>
-                <tr>
-                    <td>Dimanche</td>
-                    <td> </td>
-                    <td>18h00-22h00</td>
-                </tr>
-            </table>
 
-        </section>
-
-    </section>
-
+        
     <!-- le formulaire de contact -->
 
     <section id="formulaire-de-contact">
