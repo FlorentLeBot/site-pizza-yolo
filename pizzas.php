@@ -1,4 +1,4 @@
-<section id="pizza">
+<section id="pizza" class="items">
 
             <h3 id="pizzas">Pizzas</h3>
 

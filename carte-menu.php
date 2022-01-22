@@ -8,15 +8,16 @@ require_once "navigation.php";
 
     <nav>
         <ul>
-            <li><a href="#pizzas">Pizzas</a></li>
-            <li><a href="#burgers">Burgers</a></li>
-            <li><a href="#les-paninis">Paninis</a></li>
-            <li><a href="#boissons">Boissons</a></li>
+            <li id="btnPizzas" class="btnHover"><a href="#pizzas">Pizzas</a></li>
+            <li id="btnBurgers" class="btnHover"><a href="#burgers">Burgers</a></li>
+            <li id="btnPaninis" class="btnHover"><a href="#les-paninis">Paninis</a></li>
+            <li id="btnBoissons" class="btnHover"><a href="#boissons">Boissons</a></li>
         </ul>
     </nav>
 
-    <?php require_once "pizzas.php"; ?>
+
+    <?php require_once "pizzas.php"; ?> 
     <?php require_once "hamburgers.php"; ?>
     <?php require_once "paninis.php"; ?>
-    <?php require_once "boissons.php"; ?>
+    <?php require_once "boissons.php"; ?> 
     <?php require_once "footer.php"; ?>

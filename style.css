@@ -796,8 +796,10 @@ img {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
 }
-#contenu-carte-menu nav ul li:hover{
-    transform: scale(1.2);
+
+#contenu-carte-menu nav ul li:hover,
+#contenu-carte-menu nav ul li .active{
+    transform: scale(1.2) !important;
 }
 
 
@@ -808,14 +810,19 @@ img {
 #contenu-carte-menu #pizza,
 #contenu-carte-menu #hamburger,
 #contenu-carte-menu #paninis,
-#contenu-carte-menu #boissons {
+#contenu-carte-menu #boissons{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-
 }
+
+#contenu-carte-menu .hidden{
+    display: none !important;   
+}
+
+
 
 #contenu-carte-menu #pizza h3,
 #contenu-carte-menu #hamburger h3,
@@ -1571,5 +1578,12 @@ img {
     #pied-de-page #contenu-pied #newsletter p {
         text-align: justify;
     }
+
+    /* .active{
+
+    } */
+
+    
+
 
 }

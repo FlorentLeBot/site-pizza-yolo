@@ -5,7 +5,6 @@ require_once "navigation.php";
 
 ?>  
 
-
     <main id="contenu-blog" class="container">
 
         <h2>Blog</h2>

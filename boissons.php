@@ -1,4 +1,4 @@
-<section id="boissons">
+<section id="boissons" class="items">
             <h3>Boissons</h3>
 
             <article class="boissons soda">
