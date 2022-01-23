@@ -118,15 +118,9 @@ p {
 
 /* boite modale horaires */
 
-/* #horaires div {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 5px 0;
-   
-    
+
+/* #horaires{
+    display: none;
 } */
 
 .modal{
@@ -142,11 +136,10 @@ p {
 }
 
 .modal-wrapper{
-    width: 600px;
-    max-width: calc(100vh - 20px);
-    max-height: calc(100vh - 20px);
+    max-width: 400px;
+    max-height: 800px;
     overflow: auto;
-    padding: 20px;
+    padding: 60px;
     background: var(--couleur-principale);
    
 }
@@ -159,18 +152,22 @@ p {
     color: var(--blanc);
 }
 #horaires table {
-    background: var(--couleur-secondaire);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--blanc)
 }
 
 #horaires td {
-    border: 1px outset var(--couleur-principale);
+    /* border: 1px outset var(--couleur-secondaire); */
+    background: var(--couleur-secondaire);
     padding: 8px;
 }
 
 #horaires tr {
     margin: 0px
 }
+
 /* ------------------------------------------------------------------------------------------------------------------- */
 
 .menu-wrap {
@@ -859,7 +856,10 @@ img {
 #contenu-carte-menu nav ul li:hover,
 #contenu-carte-menu nav ul .active{
     transform: scale(1.25) !important;
+    /* background-color: var(--jaune) !important; */
 }
+
+
 
 
 /* ---------------------------------------------------------------------------------------------------------------- */
@@ -1178,21 +1178,30 @@ img {
     
 }
 #contenu-contact #formulaire-de-contact .section p label {
-    margin-top: 10px;
-    
+    margin-top: 10px;  
 }
 
 #contenu-contact #formulaire-de-contact .section p input[type="text"],
-#formulaire-de-contact .section p input[type="email"] {
+#formulaire-de-contact .section p input[type="email"]
+
+{
     margin-top: 10px;
     width: 180px;
     height: 30px;
 }
+#mes-adresses {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
 
 #contenu-contact #formulaire-de-contact .section p textarea {
     width: 180px;
     margin-top: 10px;
-    
 }
 
 #contenu-contact #formulaire-de-contact .section p input[type="radio"] {

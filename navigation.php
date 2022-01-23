@@ -56,13 +56,14 @@
         <div>
             <h1>Bienvenue</h1>
             <p>Ouvert 7j/7</p>
-            <p><a href="#horaires" class="js-modal "> Horaires</a></p>
+
+            <!-- boite modale horaire -->
             
-            
+            <p><a href="#horaires" class="js-modal "> Horaires</a></p> 
             
             <section id="horaires" class="modal" aria-hidden="true" role="dialog" aria-labelledby="#titleModal" style="display:none">
                 <div class="modal-wrapper js-modal-stop">
-                    <button class="js-modal-close">x</button>
+                    <button class="js-modal-close btn-modal-close">x</button>
                     <h2>Nos horaires d'ouverture</h2>
 
                     <table>

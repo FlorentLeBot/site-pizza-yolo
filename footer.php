@@ -62,6 +62,7 @@
     </footer>
 <!-- <script type="module" src="form.js"></script> -->
 <script type="text/javascript" src="navigation.js"></script>
+<script src="api-gouv.js"></script>
 
 </body>
 
