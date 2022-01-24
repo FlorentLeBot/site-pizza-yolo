@@ -45,7 +45,7 @@ require_once "navigation.php";
 
         <section id="categories">
             <article class="categorie">
-                <a href="carte-menu.html">
+                <a href="carte-menu.php">
                     <h2>La carte</h2>
                     <img src="images/carte-des-pizzas.png" alt="la-carte">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum deleniti nobis repudiandae amet
@@ -53,7 +53,7 @@ require_once "navigation.php";
                 </a>
             </article>
             <article class="categorie ">
-                <a href="blog.html">
+                <a href="blog.php">
                     <h2>La pizza du mois</h2>
                     <img src="images/image-blog-accueil.png" alt="pizza-du-mois">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum deleniti nobis repudiandae amet
@@ -61,7 +61,7 @@ require_once "navigation.php";
                 </a>
             </article>
             <article class="categorie">
-                <a href="blog.html">
+                <a href="blog.php">
                     <h2>Blog</h2>
                     <img src="images/image-blog.png" alt="blog">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum deleniti nobis repudiandae amet
