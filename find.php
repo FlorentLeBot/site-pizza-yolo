@@ -1,6 +1,8 @@
 <?php
 require_once "Article.php";
 
+// création des articles
+
 $article1 = new Article(
     1,
     "La pizza du mois de novembre",
@@ -49,4 +51,5 @@ $article6 = new Article(
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, laboriosam illum? Sit dolor illo iusto, dolorum eos suscipit. Odio incidunt distinctio expedita reprehenderit est maiores aperiam molestias repudiandae deleniti cumque architecto rerum cum eveniet, in temporibus sint nobis officia magnam omnis nesciunt corporis. Rem adipisci a, sit deleniti accusamus nulla vero deserunt asperiores natus eveniet accusantium quos blanditiis alias commodi consequuntur. Reiciendis sint quae accusamus voluptas eveniet ut placeat ex neque ratione nostrum laudantium, ipsa possimus maxime nulla? Quis illum sint natus, maxime voluptate quidem incidunt. Nam, maiores dicta molestiae dolorum architecto nobis non maxime voluptatem voluptatum libero distinctio alias corporis temporibus quo facere qui tempore corrupti illum asperiores fugit earum possimus voluptas! Quasi minima quas quaerat obcaecati sunt maxime quis? Provident quae fugit dolorem amet voluptate doloremque totam labore vitae sed, dolore dolor. Asperiores, rerum! Ipsa autem ipsam sed similique? Debitis numquam odit magnam similique necessitatibus, explicabo ullam cum placeat. Nobis facere eum dignissimos nemo ducimus repudiandae ullam facilis reprehenderit excepturi, quo minima, nisi, cupiditate recusandae. Aliquam accusamus porro natus eligendi quasi obcaecati quos et rem at aperiam molestiae eum doloremque omnis eaque earum quod, neque totam velit deserunt expedita pariatur, ea, dolorum ut nihil? Hic officiis, praesentium porro dignissimos harum totam, maxime ratione sequi earum quaerat ab architecto a, sunt nam ipsa beatae? Pariatur perspiciatis quas iure deserunt inventore totam vel unde vitae quo, nemo consectetur accusamus quam odit tempora officiis incidunt cum expedita consequatur perferendis esse suscipit, soluta voluptas! Iure cupiditate eius molestias qui molestiae consectetur consequatur ipsum odio aliquam, similique nihil inventore sed excepturi reprehenderit blanditiis? ",
     "article-6.php"
 );
+
 $articles = [$article1, $article2, $article3, $article4, $article5, $article6];

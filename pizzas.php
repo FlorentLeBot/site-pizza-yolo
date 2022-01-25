@@ -1,13 +1,18 @@
+<?php
+require_once "Produits.php";
+?>
+
+
 <section id="pizza" class="items">
 
             <h3 id="pizzas">Pizzas</h3>
 
             <article class="pizza">
                 <img src="images/pizza-carte-menu.png" alt="pizza-image-carte-menu">
-                <h4>MARGARITA </h4>
+                <h4><?=$margarita->getNom()?></h4>
                 <hr>
-                <p>Tomate, fromage, origan</p>
-                <p class="taille-pizza">20cm 30cm 40cm</p>
+                <p><?=$margarita->getIngredients()?></p>
+                <p class="taille-pizza"><?=$margarita->getTaille()[0]?></p>
                 <p class="prix">5,10€ 7,80€ 12,60€</p>
             </article>
 

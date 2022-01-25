@@ -48,22 +48,4 @@ class Article
     }
 }
 
-// class PageArticle extends Article
-// {
-//     public function getArticleTitre($id)
-//     {
-//         foreach ($articles as $article) {
-//             if ($article->getId() === $id) {
-//                 echo $article->affichageTitre();
-//             }
-//         }
-//     }
-//     public function getArticleContenu($id)
-//     {
-//         foreach ($articles as $article) {
-//             if ($article->getId() === $id) {
-//                 echo $article->affichageContenu();
-//             }
-//         }
-//     }
-// }
+

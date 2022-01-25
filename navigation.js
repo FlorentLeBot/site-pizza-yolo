@@ -20,7 +20,6 @@ btnPizzas.addEventListener("click", function affichePizzas() {
 btnPaninis.addEventListener("click", function affichePaninis() {
 	pizza.classList = "hidden";
 	paninis.classList = "active";
-	// btnHover.classList.add("active");
 	hamburger.classList = "hidden";
 	boisson.classList = "hidden";
   btnActive();

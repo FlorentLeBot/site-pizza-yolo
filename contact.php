@@ -32,13 +32,11 @@ require_once "navigation.php";
         </section>
 
 
-
-        
     <!-- le formulaire de contact -->
 
     <section id="formulaire-de-contact">
 
-        <form method="post" action="traitement.php">
+        <form id="#formulaire" method="post" action="traitement.php">
             <fieldset class="section">
                 <legend>Laissez-nous un message</legend>
 
