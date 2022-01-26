@@ -1,57 +1,42 @@
 <?php
 
-abstract class Produit
+abstract class Produits
 {
     protected string $nom;
     protected string $image;
-    protected array $taille;
-    protected float $prix;
+    protected string $taille;
+    protected array $tableauPrix;
     protected string $ingredients;
 
-    public function __construct(string $nom, string $image, float $prix, array $taille, string $ingredients)
+    public function __construct(string $nom, string $image, array $tableauPrix, string $taille, string $ingredients)
     {
         $this->nom = $nom;
         $this->image = $image;
         $this->taille = $taille;
-        $this->prix = $prix;
+        $this->prix = $tableauPrix;
         $this->ingredients = $ingredients;
     }
-    public function getNom()
+    public function getNom(): string
     {
         return $this->nom;
     }
-    public function getImage()
+    public function getImage(): string
     {
         return $this->image;
     }
-    public function getPrix()
+    public function getTableauPrix(): array
     {
-        return $this->prix ;
+        return $this->prix;
     }
-    public function getTaille()
+    public function getTaille(): string
     {
         return $this->taille;
     }
-    public function getIngredients()
+    public function getIngredients(): string
     {
         return $this->ingredients;
     }
 }
 
-class Pizza extends Produit
-{
-    public function __construct(string $nom, string $image, float $prix, array $taille, string $ingredients)
-    {
-        parent::__construct($nom, $image, $prix, $taille, $ingredients);
-    }
-}
 
-
-$taille = ["20 cm", "30 cm", "40 cm"];
-
-$margarita = new Pizza("margarita", "images/pizza-carte-menu.png", 5.10, $taille, "Tomate, fromage, origan");
-
-//var_dump($margarita);
-
-
-// class Paninis extends Produit{}
+// class Paninis extends Produits{}

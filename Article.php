@@ -1,36 +1,22 @@
 
 <?php
 
-require_once "find.php";
+require_once "code-client.php";
 
 class Article
-{
-    private int $id;
-    private string $titre;
-    private string $image;
-    private string $accroche;
-    private string $contenu;
-    private string $lien;
-
-    public function __construct(int $id, string $titre, string $image, string $accroche, string $contenu, string $lien)
-    {
-        $this->id = $id;
-        $this->titre = $titre;
-        $this->image = $image;
-        $this->accroche = $accroche;
-        $this->contenu = $contenu;
-        $this->lien = $lien;
-    }
-
-    public function getId()
+{ 
+    public function __construct(private int $id, private string $titre, private string $image, private string $accroche, private string $contenu, private string $lien)
+    {}
+    
+    public function getId():int
     {
         return $this->id;
     }
-    public function affichageTitre()
+    public function affichageTitre():string
     {
         return $this->titre;
     }
-    public function affichageImage()
+    public function affichageImage():string
     {
         return $this->image;
     }

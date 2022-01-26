@@ -31,54 +31,61 @@ require_once "navigation.php";
             </div>
         </section>
 
+        <!-- le formulaire de contact -->
 
-    <!-- le formulaire de contact -->
+        <section id="formulaire-de-contact">
 
-    <section id="formulaire-de-contact">
+            <form id="form" class="section" name="formulaire">
+                <fieldset class="section">
+                    <legend>Laissez-nous un message</legend>
 
-        <form id="#formulaire" method="post" action="traitement.php">
-            <fieldset class="section">
-                <legend>Laissez-nous un message</legend>
+                    <p class="civilite"><label for="civilite" class="petit">M.</label>
+                        <input type="radio" name="civilite" id="m" value="M">
 
-                <p class="civilite"><label for="civilite" class="petit">M.</label>
-                    <input type="radio" name="civilite" id="civilite" value="M">
+                        <label for="civilite">Mme</label>
+                        <input type="radio" name="civilite" id="mme" value="Mme" checked>
+                    </p>
 
-                    <label for="civilite">Mme</label>
-                    <input type="radio" name="civilite" id="civilite" value="Mme" checked>
-                </p>
+                    <p><label for="prenom">Entrez votre prénom </label>
+                        <input type="text" id="prenom" name="prenom" placeholder="prénom">
+                    </p>
 
-                <p><label for="prenom">Entrez votre prénom </label>
-                    <input type="text" id="prenom" name="prenom" placeholder="prénom">
-                </p>
+                    <p><label for="nom">Entrez votre nom </label>
+                        <input type="text" id="nom" name="nom" placeholder="nom">
+                    </p>
 
-                <p><label for="nom">Entrez votre nom </label>
-                    <input type="text" id="nom" name="nom" placeholder="nom">
-                </p>
-
-                <p><label for="address">Entrez votre adresse</label>
-                    <input id="address" type="text" id="address" name="address" placeholder="adresse">
+                    <p><label for="adresse">Entrez votre adresse</label>
+                        <input id="address" type="text" id="address" name="adresse" placeholder="adresse">
                     <div id="mes-adresses"></div>
-                </p>
+                    </p>
+
+                    <!-- <p><label for="adresse">Entrez votre adresse</label>
+                        <input id="address" type="select" id="address" name="adresse" placeholder="adresse">
+                        <option value="adresse">
+                            <div id="mes-adresses"></div>
+                        </option>
+                    </p> -->
 
 
-                <p><label for="email">Entrez votre email </label>
-                    <input type="email" id="email" name="email" placeholder="email">   
-                </p>
+                    <p><label for="email">Entrez votre email </label>
+                        <input type="email" id="email" name="email" placeholder="email">
+                    </p>
 
-
-                <p><label for="message">Entrez votre message </label>
-                    <textarea name="message" rows="5" id="message" placeholder="votre message">
+                    <p><label for="message">Entrez votre message </label>
+                        <textarea placeholder="votre message" name="message" rows="5" id="message">
                     </textarea>
-                </p>
+                    </p>
 
-                <p><input type="submit" value="Envoyer"></p>
+                    <p>
+                        <input type="checkbox" id="accept" name="accept" >J'accepte les conditions générales d'utilisation</input>
+                    </p>
 
+                    <p><button class="btnForm" type="submit">Envoyer</button></p>
 
-            </fieldset>
-        </form>
-    </section>
-
+                </fieldset>
+            </form>
+        </section>
 
 </main>
-
+<script src="form.js"></script>
 <?php require_once "footer.php"; ?>

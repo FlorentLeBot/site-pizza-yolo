@@ -1,5 +1,8 @@
 <?php
 require_once "Article.php";
+require_once "Pizza.php";
+require_once "Produits.php";
+require_once "Prix.php";
 
 // création des articles
 
@@ -53,3 +56,24 @@ $article6 = new Article(
 );
 
 $articles = [$article1, $article2, $article3, $article4, $article5, $article6];
+
+
+// creation des pizzas
+
+$taille = "20cm 30cm 40cm";
+
+$smallMargarita = new Prix(5.10, "small");
+$mediumMargarita = new Prix(7.80, "medium");
+$bigMargarita = new Prix(12.60, "big");
+
+$margarita = new Pizza("margarita", "images/pizza-carte-menu.png", [$smallMargarita, $mediumMargarita, $bigMargarita], $taille, "Tomate, fromage, origan");
+$margaritaPlus = new Pizza("margarita +", "images/pizza-carte-menu.png", [$smallMargarita, $mediumMargarita, $bigMargarita], $taille, "Tomate, fromage, + un ingrédient au choix (épaule ou champignons ou chorizo ou merguez ou poitrine fumée),origan");
+$quatreFromages = new Pizza("4 fromages +", "images/pizza-carte-menu.png", [$smallMargarita, $mediumMargarita, $bigMargarita], $taille, "Tomate, fromage, gorgonzola, chèvre, reblochon, tomates fraîches olives, origan");
+$tonito = new Pizza("tonito", "images/pizza-carte-menu.png", [$smallMargarita, $mediumMargarita, $bigMargarita], $taille, "Tomate, fromage, sauce*, épaule, oignons, olives, origan");
+$stromboli = new Pizza("stromboli", "images/pizza-carte-menu.png", [$smallMargarita, $mediumMargarita, $bigMargarita], $taille, "Tomate, fromage, chorizo, oignons, poivrons, origan");
+$campagnarde = new Pizza("campagnarde", "images/pizza-carte-menu.png", [$smallMargarita, $mediumMargarita, $bigMargarita], $taille, "Tomate, fromage, champignons, poitrine fumée, olives, origan ");
+$quatreSaisons = new Pizza("quatreSaisons", "images/pizza-carte-menu.png", [$smallMargarita, $mediumMargarita, $bigMargarita], $taille, "Tomate, fromage, artichaut, épaule, champignons, olives, origan");
+$piquante = new Pizza("piquante", "images/pizza-carte-menu.png", [$smallMargarita, $mediumMargarita, $bigMargarita], $taille, "Tomate, fromage, chorizo, merguez, olives, origan ");
+$royale = new Pizza("royale", "images/pizza-carte-menu.png", [$smallMargarita, $mediumMargarita, $bigMargarita], $taille, "Tomate, fromage, épaule, champignons, olives, origan");
+
+$pizzas = [$margarita, $margaritaPlus, $quatreFromages, $tonito, $stromboli, $campagnarde, $quatreSaisons, $piquante, $royale];

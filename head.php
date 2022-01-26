@@ -22,6 +22,7 @@
     <!-- ma feuille de style -->
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 </head>
 
 <body>
